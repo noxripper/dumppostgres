@@ -1,11 +1,13 @@
 <?php
 require_once 'config.php';
-checkAdminAuth();
+
+// Permitir acesso apenas para usuários logados
+checkAuth();
 
 header('Content-Type: application/json');
 
 try {
-    $tables = getSourceTables();
+    $tables = getConfiguredTables();
     
     echo json_encode([
         'success' => true,
