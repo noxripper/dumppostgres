@@ -1,0 +1,86 @@
+# Proteger arquivos de configuração
+<Files "app_config.json">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "config.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "migration_log.txt">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Proteger outros arquivos sensíveis
+<Files "*.json">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "*.log">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "*.txt">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Exceção para arquivos específicos que precisam ser acessados
+<Files "index.php">
+    Allow from all
+</Files>
+
+<Files "login.php">
+    Allow from all
+</Files>
+
+<Files "configuracoes.php">
+    Allow from all
+</Files>
+
+<Files "migrar.php">
+    Allow from all
+</Files>
+
+<Files "testar_conexao.php">
+    Allow from all
+</Files>
+
+<Files "logout.php">
+    Allow from all
+</Files>
+
+<Files "style.css">
+    Allow from all
+</Files>
+
+# Prevenir acesso a listagem de diretórios
+Options -Indexes
+
+# Proteger contra ataques comuns
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Proteger contra injection
+    RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]) [OR]
+    RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z])
+    RewriteRule ^(.*)$ index.php [F,L]
+    
+    # Prevenir acesso a arquivos .htaccess
+    <Files ".ht*">
+        Require all denied
+    </Files>
+</IfModule>
+
+# Headers de segurança
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>

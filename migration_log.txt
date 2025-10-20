@@ -1,0 +1,90 @@
+[2025-10-20 01:08:00] === NOVA MIGRAÇÃO INICIADA ===
+[2025-10-20 01:08:00] Usuário: admin
+[2025-10-20 01:08:00] Data/Hora: 20/10/2025 01:08:00
+[2025-10-20 01:08:00] === INICIANDO PROCESSO DE MIGRAÇÃO ===
+[2025-10-20 01:08:00] Usuário: admin (admin)
+[2025-10-20 01:08:00] Sistema: WINNT
+[2025-10-20 01:08:00] Diretório: C:\xampp\htdocs\dump
+[2025-10-20 01:08:00] 📝 Dados recebidos: Array
+(
+    [truncate] => 1
+)
+
+[2025-10-20 01:08:00] 🔍 Verificando conexões...
+[2025-10-20 01:08:00] ✅ Conexão com origem: OK - PostgreSQL 13.4, compiled by Visual C++ build 1914, 64-bit
+[2025-10-20 01:08:00] ✅ Conexão com destino: OK - PostgreSQL 13.4, compiled by Visual C++ build 1914, 64-bit
+[2025-10-20 01:08:00] 🔌 Conectando ao banco de origem...
+[2025-10-20 01:08:00] ✅ Conexão com origem estabelecida
+[2025-10-20 01:08:00] 🔌 Conectando ao banco de destino...
+[2025-10-20 01:08:00] ✅ Conexão com destino estabelecida
+[2025-10-20 01:08:00] 📋 Tabelas selecionadas: usuario, pecoproduto, ean, promocao
+[2025-10-20 01:08:00] 🗑️ MODO: ESVAZIAMENTO DE TABELAS ATIVADO
+[2025-10-20 01:08:00] 🔄 Transação iniciada no banco de destino
+[2025-10-20 01:08:00] 
+--- Processando tabela 1/4: usuario ---
+[2025-10-20 01:08:00] ✅ Tabela encontrada na origem
+[2025-10-20 01:08:00] 🏗️ Criando tabela usuario no destino...
+[2025-10-20 01:08:00]    ❌ Erro ao criar tabela usuario: SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "usuario_id_seq" does not exist
+LINE 2:     "id" bigint NOT NULL DEFAULT nextval('usuario_id_seq'::r...
+                                                 ^
+[2025-10-20 01:08:00] ❌ Falha ao criar tabela usuario
+[2025-10-20 01:08:00] 
+--- Processando tabela 2/4: pecoproduto ---
+[2025-10-20 01:08:00] ⚠️ Tabela pecoproduto não existe na origem
+[2025-10-20 01:08:00] 
+--- Processando tabela 3/4: ean ---
+[2025-10-20 01:08:00] ⚠️ Tabela ean não existe na origem
+[2025-10-20 01:08:00] 
+--- Processando tabela 4/4: promocao ---
+[2025-10-20 01:08:00] ✅ Tabela encontrada na origem
+[2025-10-20 01:08:00] ❌ Erro ao verificar tabela no destino: SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block
+[2025-10-20 01:08:00] 
+🎉 MIGRAÇÃO CONCLUÍDA!
+[2025-10-20 01:08:00] 📊 RESUMO FINAL:
+[2025-10-20 01:08:00]    • Tabelas processadas: 0/4
+[2025-10-20 01:08:00]    • Registros migrados: 0
+[2025-10-20 01:08:00]    • Modo: Esvaziar e migrar
+[2025-10-20 01:08:00] === MIGRAÇÃO FINALIZADA ===
+[2025-10-20 11:48:15] === NOVA MIGRAÇÃO INICIADA ===
+[2025-10-20 11:48:15] Usuário: admin
+[2025-10-20 11:48:15] Data/Hora: 20/10/2025 11:48:15
+[2025-10-20 11:48:15] === INICIANDO PROCESSO DE MIGRAÇÃO ===
+[2025-10-20 11:48:15] Usuário: admin (admin)
+[2025-10-20 11:48:15] Sistema: WINNT
+[2025-10-20 11:48:15] Diretório: C:\xampp\htdocs\dump
+[2025-10-20 11:48:15] ⚠️ Nenhum dado POST recebido
+[2025-10-20 11:48:15] 🔍 Verificando conexões...
+[2025-10-20 11:48:15] ✅ Conexão com origem: OK - PostgreSQL 13.4, compiled by Visual C++ build 1914, 64-bit
+[2025-10-20 11:48:15] ✅ Conexão com destino: OK - PostgreSQL 13.4, compiled by Visual C++ build 1914, 64-bit
+[2025-10-20 11:48:15] 🔌 Conectando ao banco de origem...
+[2025-10-20 11:48:15] ✅ Conexão com origem estabelecida
+[2025-10-20 11:48:15] 🔌 Conectando ao banco de destino...
+[2025-10-20 11:48:16] ✅ Conexão com destino estabelecida
+[2025-10-20 11:48:16] 📋 Tabelas selecionadas: usuario, pecoproduto, ean, promocao
+[2025-10-20 11:48:16] 💾 MODO: MIGRAÇÃO COM DADOS EXISTENTES
+[2025-10-20 11:48:16] 🔄 Transação iniciada no banco de destino
+[2025-10-20 11:48:16] 
+--- Processando tabela 1/4: usuario ---
+[2025-10-20 11:48:16] ✅ Tabela encontrada na origem
+[2025-10-20 11:48:16] 🏗️ Criando tabela usuario no destino...
+[2025-10-20 11:48:16]    ❌ Erro ao criar tabela usuario: SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "usuario_id_seq" does not exist
+LINE 2:     "id" bigint NOT NULL DEFAULT nextval('usuario_id_seq'::r...
+                                                 ^
+[2025-10-20 11:48:16] ❌ Falha ao criar tabela usuario
+[2025-10-20 11:48:16] 
+--- Processando tabela 2/4: pecoproduto ---
+[2025-10-20 11:48:16] ⚠️ Tabela pecoproduto não existe na origem
+[2025-10-20 11:48:16] 
+--- Processando tabela 3/4: ean ---
+[2025-10-20 11:48:16] ⚠️ Tabela ean não existe na origem
+[2025-10-20 11:48:16] 
+--- Processando tabela 4/4: promocao ---
+[2025-10-20 11:48:16] ✅ Tabela encontrada na origem
+[2025-10-20 11:48:16] ❌ Erro ao verificar tabela no destino: SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block
+[2025-10-20 11:48:16] 
+🎉 MIGRAÇÃO CONCLUÍDA!
+[2025-10-20 11:48:16] 📊 RESUMO FINAL:
+[2025-10-20 11:48:16]    • Tabelas processadas: 0/4
+[2025-10-20 11:48:16]    • Registros migrados: 0
+[2025-10-20 11:48:16]    • Modo: Migrar com dados existentes
+[2025-10-20 11:48:16] === MIGRAÇÃO FINALIZADA ===

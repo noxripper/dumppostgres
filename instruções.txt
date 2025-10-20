@@ -1,0 +1,28 @@
+📋 INSTRUÇÕES DE INSTALAÇÃO
+Crie uma pasta para o projeto (ex: migracao_dados)
+
+Copie todos os arquivos acima para a pasta
+
+Configure as permissões:
+
+bash
+chmod 644 app_config.json
+chmod 644 migration_log.txt
+Acesse http://seu-servidor/migracao_dados/login.php
+
+🔐 USUÁRIOS PADRÃO
+Administrador:
+
+Usuário: admin
+
+Senha: admin123
+
+Acesso completo
+
+Operador:
+
+Usuário: operador
+
+Senha: operador123
+
+Acesso somente à migração

@@ -1,0 +1,31 @@
+{
+    "source": {
+        "host": "localhost",
+        "database": "unico",
+        "username": "postgres",
+        "password": "postgres",
+        "port": "5432"
+    },
+    "target": {
+        "host": "localhost",
+        "database": "migracao",
+        "username": "postgres",
+        "password": "postgres",
+        "port": "5432"
+    },
+    "tables": [
+        "accesslog"
+    ],
+    "app": {
+        "users": {
+            "admin": {
+                "password": "admin123",
+                "level": "admin"
+            },
+            "operador": {
+                "password": "operador123",
+                "level": "operador"
+            }
+        }
+    }
+}
